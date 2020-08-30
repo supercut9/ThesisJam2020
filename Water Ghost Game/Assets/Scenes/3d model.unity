@@ -143,7 +143,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 134a20f32c0ce384ba1f5ed01e7fccba,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.83
+      value: -7.82
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 134a20f32c0ce384ba1f5ed01e7fccba,
         type: 3}
@@ -200,10 +200,30 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 2.5
       objectReference: {fileID: 0}
+    - target: {fileID: -6771373616125809166, guid: 134a20f32c0ce384ba1f5ed01e7fccba,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 134a20f32c0ce384ba1f5ed01e7fccba,
         type: 3}
       propertyPath: m_Name
       value: Bathroom Sink
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151878579622650214, guid: 134a20f32c0ce384ba1f5ed01e7fccba,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6001213230554211618, guid: 134a20f32c0ce384ba1f5ed01e7fccba,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8911720345038746384, guid: 134a20f32c0ce384ba1f5ed01e7fccba,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 134a20f32c0ce384ba1f5ed01e7fccba, type: 3}
@@ -236,7 +256,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 0.7490566, g: 0.9183387, b: 1, a: 1}
-  m_Intensity: 2
+  m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -292,13 +312,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 409681039}
-  m_LocalRotation: {x: 0.04302231, y: 0.1910064, z: 0.19091758, w: 0.9618816}
+  m_LocalRotation: {x: 0.27688608, y: -0.022963805, z: 0.076196395, w: 0.95760167}
   m_LocalPosition: {x: 0, y: 3.5, z: -3.13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0.563, y: 22.575, z: 22.565}
+  m_LocalEulerAnglesHint: {x: 32.262, y: -0.121, z: 9.064}
 --- !u!1 &805370029
 GameObject:
   m_ObjectHideFlags: 0
@@ -416,11 +436,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7132391586374863133}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.61, y: -2.48, z: 0}
+  m_LocalPosition: {x: -0.12, y: -2.48, z: 5.35}
   m_LocalScale: {x: 30, y: 30, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &8789799606334810312
 MeshRenderer:
