@@ -7,6 +7,8 @@ public class CameraDown : MonoBehaviour
     // Start is called before the first frame update
     public GameObject _cameraDown;
 
+    public GameObject _RefCameraDown;
+
     void Start()
     {
 
@@ -22,7 +24,7 @@ public class CameraDown : MonoBehaviour
       //transform.rotation = Quaternion.LookRotation(Vector3.down);
       //transform.rotation = Quaternion.Euler(45*Time.deltaTime,0,0);
 
-      if (Input.GetKeyDown(KeyCode.D)) {
+      if (_RefCameraDown.active) {
         _cameraDown.SetActive(true);
       }
 
