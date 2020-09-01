@@ -6,7 +6,6 @@ public class CameraUp : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject _cameraUp;
-    public GameObject _RefCameraUp;
 
     void Start()
     {
