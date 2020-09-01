@@ -13,6 +13,8 @@ public class ToothBrush : MonoBehaviour
     public GameObject _brushLeft;
     public GameObject _brushRight;
 
+    public GameObject _brushingSound;
+
     void Start()
     {
 
@@ -42,6 +44,7 @@ public class ToothBrush : MonoBehaviour
 
    void OnMouseDrag(){
      transform.position = GetMouseAsWorldPoint() + mOffset;
+     _brushingSound.SetActive(true);
 
      /*
      if (transform.position.x > _brushRight.transform.position.x) {
@@ -61,5 +64,9 @@ public class ToothBrush : MonoBehaviour
        transform.position.y = _brushDown.transform.position.y;
      }
      */
+   }
+
+   void OnMouseExit(){
+     _brushingSound.SetActive(false);
    }
 }
