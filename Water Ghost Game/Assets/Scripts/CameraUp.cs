@@ -6,7 +6,7 @@ public class CameraUp : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject _cameraUp;
-    public GameObject _RefCameraUp;
+    //public GameObject _RefCameraUp;
 
     void Start()
     {
@@ -16,10 +16,11 @@ public class CameraUp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      if (Input.GetKey(KeyCode.A)) {
+      /*
+      if (_RefCameraUp.active) {
         _cameraUp.SetActive(true);
       }
-
+*/
       if (_cameraUp.active) {
         //mian code starts
         if (Mathf.Abs(transform.position.z) < Mathf.Abs(_cameraUp.transform.position.z) ) {
