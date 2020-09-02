@@ -33,11 +33,10 @@ public class CameraDown : MonoBehaviour
       if (_cameraDown.active) {
         //mian code starts
         if (Mathf.Abs(transform.position.z) > Mathf.Abs(_cameraDown.transform.position.z)) {
-          transform.RotateAround(transform.position, Vector3.right, 20 * Time.deltaTime);
+          transform.RotateAround(transform.position, Vector3.left, 20 * Time.deltaTime * 1.2f);
           //transform.Translate(Vector3.forward * Time.deltaTime * 0.7f);
-          transform.position = Vector3.MoveTowards(transform.position, _cameraDown.transform.position, Time.deltaTime * 0.7f);
+          transform.position = Vector3.MoveTowards(transform.position, _cameraDown.transform.position, Time.deltaTime * 0.42f);
         }
-
         else{
           _cameraDown.SetActive(false);
         }

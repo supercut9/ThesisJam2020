@@ -18,12 +18,18 @@ public class CursorControl : MonoBehaviour
     public Texture2D _cursorOver;
     public Texture2D _cursorWipe;
 
-    public GameObject _mirrorCover;
+    public GameObject _mirrorCover1;
+    public GameObject _mirrorCover2;
+    public GameObject _mirrorCover3;
 
     //private float _changeA = 0;
-    private SpriteRenderer _rend;
+    private SpriteRenderer _rend1;
+    private SpriteRenderer _rend2;
+    private SpriteRenderer _rend3;
 
-    public GameObject _RefCameraDown;
+    public GameObject _RefCameraDown1;
+    public GameObject _RefCameraDown2;
+    public GameObject _RefCameraDown3;
 
     public bool cameraActive = false;
 
@@ -33,7 +39,9 @@ public class CursorControl : MonoBehaviour
     void Start()
     {
       _hotSpot = new Vector2 (_cursorYellow1.width, _cursorYellow1.height);
-      _rend = _mirrorCover.GetComponent<SpriteRenderer>();
+      _rend1 = _mirrorCover1.GetComponent<SpriteRenderer>();
+      _rend2 = _mirrorCover2.GetComponent<SpriteRenderer>();
+      _rend3 = _mirrorCover3.GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -57,8 +65,10 @@ public class CursorControl : MonoBehaviour
       */
 
       if (cameraActive) {
-        _mirrorCover.SetActive(false);
-        _RefCameraDown.SetActive(true);
+        //_mirrorCover1.SetActive(false);
+        //_mirrorCover2.SetActive(false);
+        //_mirrorCover3.SetActive(false);
+        //_RefCameraDown.SetActive(true);
       }
 
 
@@ -72,7 +82,16 @@ public class CursorControl : MonoBehaviour
         Cursor.SetCursor(_cursorWipe, _hotSpot, _cursorMode);
         //Flowchart.BroadcastFungusMessage("Camera Down 1");
         //_t = Time.time;
-        StartCoroutine(FadeTo(0.0f, 5.0f - _dt));
+        if (_mirrorCover1.active) {
+          StartCoroutine(FadeTo(0.0f, 5.0f - _dt, _rend1, _mirrorCover1, _RefCameraDown1));
+        }
+        if (_mirrorCover2.active) {
+          StartCoroutine(FadeTo(0.0f, 5.0f - _dt, _rend2, _mirrorCover2, _RefCameraDown2));
+        }
+        if (_mirrorCover3.active) {
+          StartCoroutine(FadeTo(0.0f, 5.0f - _dt, _rend3, _mirrorCover3, _RefCameraDown3));
+        }
+
       }
       else{
         //StopCoroutine(FadeTo(0.0f, 5.0f - _dt));
@@ -98,14 +117,14 @@ public class CursorControl : MonoBehaviour
       }
     }
 
-    IEnumerator FadeTo(float aValue, float aTime){
-    float alpha = _rend.color.a;
+    IEnumerator FadeTo(float aValue, float aTime, SpriteRenderer aRend, GameObject aGame, GameObject aRef){
+    float alpha = aRend.color.a;
     float _aaa = 0;
     for (float t = 0.0f; t < 1.0f; t += Time.deltaTime / aTime)
     {
-        Color newColor = new Color(_rend.color.r, _rend.color.g, _rend.color.b, Mathf.Lerp(alpha,aValue,t));
-        _rend.color = newColor;
-        _aaa = _rend.color.a;
+        Color newColor = new Color(aRend.color.r, aRend.color.g, aRend.color.b, Mathf.Lerp(alpha,aValue,t));
+        aRend.color = newColor;
+        _aaa = aRend.color.a;
         yield return null;
     }
     /*
@@ -116,6 +135,8 @@ public class CursorControl : MonoBehaviour
     */
     //yield return new WaitForSeconds(5);
     cameraActive = true;
+    aRef.SetActive(true);
+    aGame.SetActive(false);
   }
 /*
   IEnumerator FadeTo(float aValue, float aTime){

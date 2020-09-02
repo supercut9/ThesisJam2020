@@ -7,12 +7,12 @@ public class ToothBrush : MonoBehaviour
     // Start is called before the first frame update
     private Vector3 mOffset;
     private float mZCoord;
-
+/*
     public GameObject _brushUp;
     public GameObject _brushDown;
     public GameObject _brushLeft;
     public GameObject _brushRight;
-
+*/
     public GameObject _brushingSound;
 
     void Start()
