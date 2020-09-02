@@ -307,7 +307,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &50586988
 Transform:
   m_ObjectHideFlags: 0
@@ -431,8 +431,12 @@ MonoBehaviour:
   _cursorYellow1: {fileID: 2800000, guid: 74428db325f99a44589477198c7e39ea, type: 3}
   _cursorOver: {fileID: 2800000, guid: c4561387ca1c20545a5b8c5fed2c0619, type: 3}
   _cursorWipe: {fileID: 2800000, guid: 301943853f6078440a3b80e5b3dcea76, type: 3}
-  _mirrorCover: {fileID: 1467560682}
-  _RefCameraDown: {fileID: 1128970453}
+  _mirrorCover1: {fileID: 0}
+  _mirrorCover2: {fileID: 0}
+  _mirrorCover3: {fileID: 0}
+  _RefCameraDown1: {fileID: 0}
+  _RefCameraDown2: {fileID: 0}
+  _RefCameraDown3: {fileID: 0}
   cameraActive: 0
 --- !u!1 &67757502
 GameObject:
@@ -494,10 +498,12 @@ GameObject:
   - component: {fileID: 67757510}
   - component: {fileID: 67757509}
   - component: {fileID: 67757508}
-  - component: {fileID: 67757507}
   - component: {fileID: 67757506}
   - component: {fileID: 67757505}
   - component: {fileID: 67757504}
+  - component: {fileID: 67757560}
+  - component: {fileID: 67757559}
+  - component: {fileID: 67757507}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -584,19 +590,31 @@ MonoBehaviour:
   targetGameObjectOLD: {fileID: 0}
 --- !u!114 &67757507
 MonoBehaviour:
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 67757502}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2f6487d21a03404cb21b245f0242e79, type: 3}
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parentBlock: {fileID: 67757557}
-  suppressBlockAutoSelect: 0
-  waitForFrames: 1
+  itemId: 62
+  indentLevel: 0
+  storyText: 1111111
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
 --- !u!114 &67757508
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -1587,7 +1605,7 @@ MonoBehaviour:
   itemId: 0
   blockName: start
   description: 
-  eventHandler: {fileID: 67757507}
+  eventHandler: {fileID: 0}
   commandList:
   - {fileID: 67757556}
   - {fileID: 67757555}
@@ -1622,8 +1640,10 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks: []
-  selectedCommands: []
+  selectedBlocks:
+  - {fileID: 67757560}
+  selectedCommands:
+  - {fileID: 67757507}
   variables:
   - {fileID: 67757551}
   description: 
@@ -1636,6 +1656,94 @@ MonoBehaviour:
   hideCommands: []
   luaEnvironment: {fileID: 0}
   luaBindingName: flowchart
+--- !u!114 &67757559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 67757502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2f6487d21a03404cb21b245f0242e79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentBlock: {fileID: 67757560}
+  suppressBlockAutoSelect: 0
+  waitForFrames: 1
+--- !u!114 &67757560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 67757502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 252.20612
+    y: 3.8247833
+    width: 103.6
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 61
+  blockName: back up2
+  description: 
+  eventHandler: {fileID: 67757559}
+  commandList:
+  - {fileID: 67757507}
+  suppressAllAutoSelections: 0
+--- !u!1 &94387674
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 94387675}
+  - component: {fileID: 94387676}
+  m_Layer: 0
+  m_Name: Model Controller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &94387675
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 94387674}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.366, y: 2.7599998, z: -1.51}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1941808375}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &94387676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 94387674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d3cecc444f2a904884616a12cc4dce0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _modelKira: {fileID: 126109988}
+  _KiraNormal: {fileID: 2100000, guid: 10933d47096e17f4eb473d2febcc8902, type: 2}
+  _KiraGhost: {fileID: 2100000, guid: 04ddcd4011b3003418024a323370ab8e, type: 2}
 --- !u!1001 &96006845
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1698,6 +1806,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4968227114941748, guid: af37e7a31e08419419e977f03df8a2b6,
     type: 3}
   m_PrefabInstance: {fileID: 329170791}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &126109988 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6803475563692985696, guid: 897ce4226220e904683c1ccf1dcc5c43,
+    type: 3}
+  m_PrefabInstance: {fileID: 1137922081}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &139242718
 GameObject:
@@ -2572,7 +2686,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 691086800}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 1187c41ffdd7f8944bc651a7855c3760, type: 2}
   m_CullingMode: 0
@@ -3948,7 +4062,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: d42255343698eaf498b24ef5c15bbec3, type: 2}
+      objectReference: {fileID: 2100000, guid: 04ddcd4011b3003418024a323370ab8e, type: 2}
     - target: {fileID: 2602726647471909078, guid: 897ce4226220e904683c1ccf1dcc5c43,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4104,7 +4218,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1184903934
 Transform:
   m_ObjectHideFlags: 0
@@ -4878,10 +4992,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e22fc0bed02d5349ae6c4e13f85874f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _brushUp: {fileID: 444941308}
-  _brushDown: {fileID: 690016959}
-  _brushLeft: {fileID: 558091447}
-  _brushRight: {fileID: 316528006}
   _brushingSound: {fileID: 1164593981}
 --- !u!61 &1643752506
 BoxCollider2D:
@@ -5635,6 +5745,7 @@ Transform:
   - {fileID: 2133947875}
   - {fileID: 183406955}
   - {fileID: 35335596}
+  - {fileID: 94387675}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
