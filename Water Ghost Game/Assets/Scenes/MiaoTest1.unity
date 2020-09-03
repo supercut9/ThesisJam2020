@@ -1248,9 +1248,9 @@ MonoBehaviour:
   _cursorMode: 0
   _hotSpot: {x: 0, y: 0}
   _yellowLightRef: {fileID: 676204040}
-  _cursorYellow1: {fileID: 2800000, guid: 74428db325f99a44589477198c7e39ea, type: 3}
-  _cursorOver: {fileID: 2800000, guid: c4561387ca1c20545a5b8c5fed2c0619, type: 3}
-  _cursorWipe: {fileID: 2800000, guid: 301943853f6078440a3b80e5b3dcea76, type: 3}
+  _cursorYellow1: {fileID: 2800000, guid: 68c48add76e4726438206cd65743c34b, type: 3}
+  _cursorOver: {fileID: 2800000, guid: fc00e055c1980fa4e978f19f0780b72f, type: 3}
+  _cursorWipe: {fileID: 2800000, guid: 5041ebd28e34d4041af96875db8a9021, type: 3}
   _mirrorCover1: {fileID: 1405805780}
   _mirrorCover2: {fileID: 1158108102}
   _mirrorCover3: {fileID: 1284725738}
@@ -3951,9 +3951,8 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 885947400}
-  selectedCommands:
-  - {fileID: 885947397}
+  - {fileID: 885947465}
+  selectedCommands: []
   variables: []
   description: 
   stepPause: 0
