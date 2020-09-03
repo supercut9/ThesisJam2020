@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MiaoTest1.unity
+    guid: 20d91d75c9a666a4cbab6795c60081e3
   m_configObjects: {}
