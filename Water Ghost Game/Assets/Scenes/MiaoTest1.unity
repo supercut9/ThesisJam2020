@@ -2726,7 +2726,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 03aa52ad79d64fa4bb433d6901061a9f, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 7a404ca4c68c38a418ececfb0db0b683, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -3074,7 +3074,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &885947359
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -3854,7 +3854,7 @@ MonoBehaviour:
   itemId: 5
   indentLevel: 0
   volume: 1
-  fadeDuration: 5
+  fadeDuration: 7
   waitUntilFinished: 1
 --- !u!114 &885947398
 MonoBehaviour:
@@ -3942,7 +3942,7 @@ MonoBehaviour:
   scrollPos: {x: 50.593872, y: 76.47522}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
-  blockViewHeight: 266.25
+  blockViewHeight: 445.8
   zoom: 1
   scrollViewRect:
     serializedVersion: 2
@@ -3952,7 +3952,8 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 885947400}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 885947397}
   variables: []
   description: 
   stepPause: 0
